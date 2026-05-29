@@ -5,231 +5,249 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anarchy Shop</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Orbitron',sans-serif;
+    font-family:Segoe UI,sans-serif;
 }
 
 body{
-    background:#0a0014;
+    background:#0d1117;
     color:white;
-    overflow-x:hidden;
-}
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:
-    radial-gradient(circle at center,#6a00ff44 0%,transparent 70%);
-    z-index:-2;
-}
-
-body::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:url("https://www.transparenttextures.com/patterns/stardust.png");
-    opacity:.2;
-    z-index:-1;
 }
 
 header{
-    position:sticky;
-    top:0;
-    background:rgba(10,0,20,.95);
-    backdrop-filter:blur(10px);
-    border-bottom:2px solid #8a2be2;
-    padding:20px;
-}
-
-.logo{
+    padding:30px;
     text-align:center;
-    font-size:42px;
-    font-weight:700;
-    color:#bb86fc;
-    text-shadow:0 0 15px #8a2be2;
+    background:linear-gradient(135deg,#6a00ff,#ff00ff);
 }
 
-nav{
-    margin-top:15px;
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
+header h1{
+    font-size:3rem;
 }
 
-nav a{
+header p{
+    margin-top:10px;
+    opacity:.8;
+}
+
+.discord-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 24px;
+    background:#5865F2;
     color:white;
     text-decoration:none;
-    padding:10px 15px;
-    border:1px solid #8a2be2;
     border-radius:10px;
     transition:.3s;
 }
 
-nav a:hover{
-    background:#8a2be2;
-    box-shadow:0 0 20px #8a2be2;
+.discord-btn:hover{
+    transform:scale(1.05);
 }
 
-.hero{
-    text-align:center;
-    padding:80px 20px;
+section{
+    padding:40px;
 }
 
-.hero h1{
-    font-size:60px;
-    color:#d6b3ff;
-    text-shadow:0 0 25px #8a2be2;
+.section-title{
+    margin-bottom:20px;
+    color:#c084ff;
 }
 
-.hero p{
-    margin-top:15px;
-    color:#cfcfcf;
-}
-
-.section{
-    padding:50px 10%;
-}
-
-.section h2{
-    text-align:center;
-    margin-bottom:30px;
-    color:#bb86fc;
-}
-
-.cards{
+.grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+    gap:20px;
 }
 
 .card{
-    background:rgba(20,20,35,.8);
-    border:1px solid #8a2be2;
+    background:#161b22;
+    border:1px solid #30363d;
     border-radius:15px;
-    padding:20px;
+    overflow:hidden;
     transition:.3s;
 }
 
 .card:hover{
     transform:translateY(-5px);
-    box-shadow:0 0 25px #8a2be2;
+    border-color:#a855f7;
 }
 
-.card h3{
-    color:#bb86fc;
-    margin-bottom:10px;
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
 }
 
 .price{
-    margin-top:10px;
     color:#00ff88;
-}
-
-.buy{
-    display:inline-block;
-    margin-top:15px;
-    padding:10px 20px;
-    background:#8a2be2;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-}
-
-.buy:hover{
-    box-shadow:0 0 15px #8a2be2;
+    font-weight:bold;
+    margin-top:10px;
 }
 
 footer{
     text-align:center;
     padding:30px;
-    border-top:1px solid #8a2be2;
-    margin-top:50px;
+    border-top:1px solid #30363d;
+    margin-top:40px;
 }
 </style>
 </head>
-
 <body>
 
 <header>
-    <div class="logo">⚡ ANARCHY SHOP ⚡</div>
+    <h1>⚔️ Anarchy Shop</h1>
+    <p>Marketplace for Anarchy Servers</p>
 
-    <nav>
-        <a href="#about">ABOUT</a>
-        <a href="#kits">KITS</a>
-        <a href="#illegals">ILLEGALS</a>
-        <a href="#consumables">CONSUMABLES</a>
-        <a href="#misc">MISC</a>
-        <a href="#grief">GRIEF</a>
-        <a href="#blocks">BLOCKS</a>
-    </nav>
+    <a class="discord-btn"
+       href="https://discord.gg/YOURINVITE">
+       Join Discord
+    </a>
 </header>
 
-<section class="hero">
-    <h1>ANARCHY SHOP</h1>
-    <p>Best items for anarchy servers.</p>
+<section>
+<h2 class="section-title">☠ Illegals</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="images/persik.jpg">
+<div class="card-content">
+<h3>Persik's Illegal Collection V3</h3>
+<p>Rare illegals collection</p>
+<div class="price">$0.20</div>
+</div>
+</div>
+
+<div class="card">
+<img src="images/chain.jpg">
+<div class="card-content">
+<h3>Chain Command Block Kit</h3>
+<p>Command block collection</p>
+<div class="price">$0.40</div>
+</div>
+</div>
+
+<div class="card">
+<img src="images/totems.jpg">
+<div class="card-content">
+<h3>Glitched Totems</h3>
+<p>Collector item</p>
+<div class="price">$0.30</div>
+</div>
+</div>
+
+</div>
 </section>
 
-<section id="about" class="section">
-    <h2>ABOUT</h2>
-    <p style="text-align:center">
-        Welcome to Anarchy Shop. Here you can buy kits, illegals,
-        consumables, grief items and more.
-    </p>
+<section>
+<h2 class="section-title">⛏ Kits</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="images/kit1.jpg">
+<div class="card-content">
+<h3>Kit 1 by Sk1lo4ek</h3>
+<div class="price">$0.02</div>
+</div>
+</div>
+
+<div class="card">
+<img src="images/tools.jpg">
+<div class="card-content">
+<h3>Tools Kit</h3>
+<div class="price">$0.01</div>
+</div>
+</div>
+
+<div class="card">
+<img src="images/obsidian.jpg">
+<div class="card-content">
+<h3>Obsidian Kit</h3>
+<div class="price">$0.05</div>
+</div>
+</div>
+
+</div>
 </section>
 
-<section id="kits" class="section">
-    <h2>KITS</h2>
+<section>
+<h2 class="section-title">🧱 Blocks</h2>
 
-    <div class="cards">
+<div class="grid">
 
-        <div class="card">
-            <h3>Starter Kit</h3>
-            <p>Armor, tools and resources.</p>
-            <div class="price">$5</div>
-            <a class="buy" href="#">BUY</a>
-        </div>
+<div class="card">
+<div class="card-content">
+<h3>Obsidian</h3>
+<div class="price">$0.05</div>
+</div>
+</div>
 
-        <div class="card">
-            <h3>PvP Kit</h3>
-            <p>Combat-ready equipment.</p>
-            <div class="price">$10</div>
-            <a class="buy" href="#">BUY</a>
-        </div>
+<div class="card">
+<div class="card-content">
+<h3>Obsidian V2</h3>
+<div class="price">$0.10</div>
+</div>
+</div>
 
-    </div>
+</div>
 </section>
 
-<section id="illegals" class="section">
-    <h2>ILLEGALS</h2>
+<section>
+<h2 class="section-title">💥 Grief</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="card-content">
+<h3>TNT Shulker</h3>
+<div class="price">$0.10</div>
+</div>
+</div>
+
+</div>
 </section>
 
-<section id="consumables" class="section">
-    <h2>CONSUMABLES</h2>
-</section>
+<section>
+<h2 class="section-title">🥕 Consumables</h2>
 
-<section id="misc" class="section">
-    <h2>MISC</h2>
-</section>
+<div class="grid">
 
-<section id="grief" class="section">
-    <h2>GRIEF</h2>
-</section>
+<div class="card">
+<div class="card-content">
+<h3>Totems</h3>
+<div class="price">$0.04</div>
+</div>
+</div>
 
-<section id="blocks" class="section">
-    <h2>BLOCKS</h2>
+<div class="card">
+<div class="card-content">
+<h3>Gapples</h3>
+<div class="price">SOON</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>EXP Bottles</h3>
+<div class="price">SOON</div>
+</div>
+</div>
+
+</div>
 </section>
 
 <footer>
-    © 2026 ANARCHY SHOP
+    © 2026 Anarchy Shop
 </footer>
 
 </body>
-  </html>
+</html>
